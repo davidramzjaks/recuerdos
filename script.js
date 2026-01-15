@@ -5,7 +5,8 @@ if (foto) {
   document.getElementById("foto").src = "imagenes/" + foto;
 } else {
   document.getElementById("foto").style.display = "none";
-  document.getElementById("texto-frase").textContent = "No hay recuerdo para mostrar 😞";
+  document.getElementById("texto-frase").textContent = "No hay imagen para mostrar 😞";
+  document.getElementById("contenedor-sentimiento").style.display = "none";
 }
 
 const frases = [
@@ -19,3 +20,4 @@ const frases = [
 
 const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
 document.getElementById("texto-frase").textContent = fraseAleatoria;
+
