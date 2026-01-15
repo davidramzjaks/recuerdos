@@ -1,13 +1,12 @@
-
 const params = new URLSearchParams(window.location.search);
 const foto = params.get("img");
 
 if (foto) {
-  document.getElementById("foto").src = "fotos/" + foto;
+  document.getElementById("foto").src = "imagenes/" + foto;
 } else {
+  document.getElementById("foto").style.display = "none";
   document.getElementById("texto-frase").textContent = "No hay recuerdo para mostrar 😞";
 }
-
 
 const frases = [
   "Lo bonito se queda aunque duela poquito 💛",
@@ -19,5 +18,4 @@ const frases = [
 ];
 
 const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
-
 document.getElementById("texto-frase").textContent = fraseAleatoria;
