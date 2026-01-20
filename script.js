@@ -1,13 +1,9 @@
 const params = new URLSearchParams(window.location.search);
 const foto = params.get("img");
 
-if (foto) {
-  document.getElementById("foto").src = "imagenes/" + foto;
-} else {
-  document.getElementById("foto").style.display = "none";
-  document.getElementById("texto-frase").textContent = "No hay imagen para mostrar 😞";
-  document.getElementById("contenedor-sentimiento").style.display = "none";
-}
+const img = document.getElementById("foto");
+const fraseTexto = document.getElementById("texto-frase");
+const contenedorSentimiento = document.getElementById("contenedor-sentimiento");
 
 const frases = [
   "Lo bonito se queda aunque duela poquito 💛",
@@ -18,6 +14,11 @@ const frases = [
   "Si estás aquí, ya vas ganando 🕊️"
 ];
 
-const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
-document.getElementById("texto-frase").textContent = fraseAleatoria;
-
+if (foto) {
+  img.src = "imagenes/" + foto;
+  fraseTexto.textContent = frases[Math.floor(Math.random() * frases.length)];
+} else {
+  img.style.display = "none";
+  contenedorSentimiento.style.display = "none";
+  fraseTexto.textContent = "No hay imagen para mostrar 😞";
+}
