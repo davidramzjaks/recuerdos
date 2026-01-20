@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fafafa;
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  #contenedor {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  #contenedor img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+  
+  #sentimiento textarea {
+    width: 100%;
+    resize: none;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  #frase {
+    margin-top: 18px;
+    font-style: italic;
+    color: #555;
+  }
